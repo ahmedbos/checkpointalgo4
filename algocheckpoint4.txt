@@ -1,0 +1,13 @@
+FUNCTION palindrome(a) : BOOLEAN
+VAR
+    r:BOOLEAN:= FALSE;
+BEGIN
+    IF (a[0]=a[a.length] ) THEN
+        r:=palindrome(a[1:a.length-1])
+    ELSE_IF ((a="") or(a.length=1)) THEN
+        r:=TRUE;
+    ELSE
+        r:=FALSE;
+    END_IF
+    RETURN r ;
+END
